@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartLearning - Course Details</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    .star-container {
+      margin-top: 20px;
+    }
+
+    .star {
+      font-size: 35px;
+      cursor: pointer;
+      color: gray;
+      transition: color 0.2s;
+    }
+
+    .star:hover,
+    .star.selected {
+      color: gold;
+    }
+  </style>
+</head>
+
+<body onload="loadCourseDetails()">
+
+  <nav class="navbar">
+    <div class="logo">SmartLearning</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <section style="padding:100px 20px;">
+    <h1 id="course-name"></h1>
+    <p id="course-credits"></p>
+    <p id="course-teacher"></p>
+    <p id="course-description"></p>
+    <p id="student-count" style="font-size:16px; margin-top:10px;">👥 Enrolled Students: 0</p>
+
+    <button
+      id="enroll-btn"
+      onclick="enrollCourse()"
+      style="margin-top:20px; padding:12px 30px; background-color:#00bcd4; color:white; border:none; border-radius:25px; font-size:16px; cursor:pointer;"
+    >
+      Enroll Now
+    </button>
+
+    <p id="enroll-message" style="margin-top:15px; font-size:16px;"></p>
+
+    <!-- Star Rating -->
+    <div class="star-container">
+      <p style="font-size:18px;

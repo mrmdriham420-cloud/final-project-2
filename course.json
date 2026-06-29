@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Algorithm",
+    "credits": 3,
+    "teacher": "Dr. Rahman",
+    "description": "Learn algorithm design, complexity analysis and problem solving."
+  },
+  {
+    "id": 2,
+    "name": "Artificial Intelligence",
+    "credits": 3,
+    "teacher": "Dr. Hasan",
+    "description": "AI fundamentals including search, ML and reasoning."
+  },
+  {
+    "id": 3,
+    "name": "Database Systems",
+    "credits": 3,
+    "teacher": "Prof. Karim",
+    "description": "Relational databases, SQL, normalization and transactions."
+  },
+  {
+    "id": 4,
+    "name": "Mathematics",
+    "credits": 4,
+    "teacher": "Dr. Sultana",
+    "description": "Discrete math, linear algebra and probability."
+  },
+  {
+    "id": 5,
+    "name": "EEE",
+    "credits": 3,
+    "teacher": "Engr. Mahmud",
+    "description": "Basic electrical and electronic engineering concepts."
+  }
+]

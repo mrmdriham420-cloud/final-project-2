@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+async function seed() {
+
+    // আগে সব delete করো
+    await fetch("http://localhost:5000/api/courses/deleteall", {
+        method: "DELETE"
+    });
+
+    console.log("Old courses deleted!");
+
+    const courses = [
+        {
+            name: "Algorithm",
+            teacher: "Dr. Rahman",
+            credits: 3,
+            description: "Learn algorithm design, complexity analysis and problem solving."
+        },
+        {
+            name: "Artificial Intelligence",
+            teacher: "Dr. Hasan",
+            credits: 3,
+            description: "AI fundamentals including search, ML and reasoning."
+        },
+        {
+            name: "Database Systems",
+            teacher: "Prof. Karim",
+            credits: 3,
+            description: "Relational databases, SQL, normalization and transactions."
+        },
+        {
+            name: "Mathematics",
+            teacher: "Dr. Sultana",
+            credits: 4,
+            description: "Discrete math, linear algebra and probability."
+        },
+        {
+            name: "EEE",
+            teacher: "Engr. Mahmud",
+            credits: 3,
+            description: "Basic electrical and electronic engineering concepts."
+        }
+    ];
+
+    for (const course of courses) {
+        const res = await fetch("http://localhost:5000/api/courses", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(course)
+        });
+        const data = await res.json();
+        console.log("Added:", data.name);
+    }
+
+    alert("All courses added successfully!");
+
+}
+
+seed();
+
+</script>
+</body>
+</html>

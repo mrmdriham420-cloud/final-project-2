@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartLearning - Courses</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body onload="loadCourses()">
+  <nav class="navbar">
+    <div class="logo">SmartLearning</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- Search Bar + Filter -->
+  <section style="padding: 100px 20px 20px 20px; text-align:center;">
+    <input
+      type="text"
+      id="search-input"
+      placeholder="🔍 Search courses..."
+      oninput="filterCourses()"
+      style="width:40%; padding:10px 15px; border-radius:25px; border:1px solid #ccc; font-size:16px; outline:none; margin-right:10px;"
+    >
+
+    <select
+      id="credit-filter"
+      onchange="filterCourses()"
+      style="padding:10px 15px; border-radius:25px; border:1px solid #ccc; font-size:16px; outline:none; cursor:pointer;"
+    >
+      <option value="all">All Credits</option>
+      <option value="1">1 Credit</option>
+      <option value="2">2 Credits</option>
+      <option value="3">3 Credits</option>
+      <option value="4">4 Credits</option>
+    </select>
+  </section>
+
+  <section class="course-container">
+    <!-- Dynamic course cards will load here -->
+  </section>
+
+</body>
+</html>
